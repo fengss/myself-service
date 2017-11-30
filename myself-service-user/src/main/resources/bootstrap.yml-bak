@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: myself-service-user
+
+security.basic.enabled: false
+
+server:
+  port: 8518
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123@peer1:1111/eureka, http://admin:123@peer2:1112/eureka

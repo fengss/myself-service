@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: myself-web-user
+security.basic.enabled: false
+server:
+  port: 8170
+management:
+  security:
+    enabled: false
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html # ${server.port}为该服务的端口号
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123@peer1:1111/eureka, http://admin:123@peer2:1112/eureka
+info:
+  m2_home: ${MY_IP:localhost}

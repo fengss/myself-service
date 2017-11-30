@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.coderss</groupId>
+    <artifactId>myself-service</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>myself-common</module>
+        <module>myself-common-model</module>
+        <module>myself-common-mapper</module>
+        <module>myself-service-user</module>
+        <module>myself-service-user-api</module>
+        <module>myself-web-user</module>
+        <module>myself-turbine</module>
+        <module>myself-dashboard</module>
+        <module>myself-service-college</module>
+        <module>myself-service-college-api</module>
+        <module>myself-web-college</module>
+        <module>myself-service-enterprise</module>
+        <module>myself-service-enterprise-api</module>
+        <module>myself-web-enterprise</module>
+        <module>myself-api-gateway</module>
+        <module>myself-zipkin</module>
+    </modules>
+
+    <!-- 使用最新的spring-boot版本 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://www.coderss.cn:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://www.coderss.cn:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
