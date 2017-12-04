@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableHystrix
 @Configuration
 @EnableDiscoveryClient
-@MapperScan("cn.coderss.mapper")
+@MapperScan("cn.coderss.user.mapper")
 @EnableApolloConfig(value = "application", order = 10)
 public class ServiceUserWebApplication {
     public static void main(String[] args) {

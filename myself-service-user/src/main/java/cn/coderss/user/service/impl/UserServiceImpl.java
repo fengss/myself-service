@@ -1,6 +1,6 @@
 package cn.coderss.user.service.impl;
 
-import cn.coderss.mapper.ActivityMapper;
+import cn.coderss.user.mapper.ActivityMapper;
 import cn.coderss.model.ActivityExample;
 import cn.coderss.model.UserModel;
 import cn.coderss.model.XbinResult;

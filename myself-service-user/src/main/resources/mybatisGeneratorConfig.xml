@@ -10,9 +10,9 @@
                         userId="root" password="root"/>
         <javaModelGenerator targetPackage="cn.coderss.model"
                             targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-common-model/src/main/java"/>
-        <sqlMapGenerator targetPackage="cn.coderss.mapper"
+        <sqlMapGenerator targetPackage="cn.coderss.user.mapper"
                          targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-service-user/src/main/resources"/>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.coderss.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.coderss.user.mapper"
                              targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-service-user/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
