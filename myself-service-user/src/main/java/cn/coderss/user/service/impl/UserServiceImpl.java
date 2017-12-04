@@ -7,6 +7,8 @@ import cn.coderss.model.XbinResult;
 import cn.coderss.user.mapper.ActivityMapper;
 import cn.coderss.user.service.UserService;
 import io.swagger.annotations.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -26,6 +28,8 @@ public class UserServiceImpl implements UserService {
 
     @Value("${info.server}")
     private String server;
+
+    Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     ActivityMapper mapper;
@@ -122,6 +126,7 @@ public class UserServiceImpl implements UserService {
             }
     )
     public XbinResult getUserByServer(String server) {
+        logger.info("server:{}", server);
         return new XbinResult(200, "ok",
                 mapper.selectByExample(new ActivityExample()));
     }
