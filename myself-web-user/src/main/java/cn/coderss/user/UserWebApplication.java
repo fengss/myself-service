@@ -1,5 +1,6 @@
 package cn.coderss.user;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -17,6 +18,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @EnableFeignClients
 @SpringBootApplication
 @EnableHystrix
+@EnableApolloConfig(value = "application", order = 10)
 public class UserWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserWebApplication.class);

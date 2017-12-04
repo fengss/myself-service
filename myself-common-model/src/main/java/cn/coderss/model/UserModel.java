@@ -1,5 +1,7 @@
 package cn.coderss.model;
 
+import java.util.List;
+
 /**
  * Created with myself-service.
  *

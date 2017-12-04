@@ -1,9 +1,12 @@
 package cn.coderss.user.service.impl;
 
+import cn.coderss.mapper.ActivityMapper;
+import cn.coderss.model.ActivityExample;
 import cn.coderss.model.UserModel;
 import cn.coderss.model.XbinResult;
 import cn.coderss.user.service.UserService;
 import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +25,9 @@ public class UserServiceImpl implements UserService {
 
     @Value("${info.server}")
     private String server;
+
+    @Autowired
+    ActivityMapper mapper;
 
     @Override
     @ApiOperation("查询用户通过用户名")
@@ -115,6 +121,7 @@ public class UserServiceImpl implements UserService {
             }
     )
     public XbinResult getUserByServer(String server) {
-        return new XbinResult(200, "ok", new UserModel(1, "张三", 20, "张三号", this.server));
+        return new XbinResult(200, "ok",
+                mapper.selectByExample(new ActivityExample()));
     }
 }

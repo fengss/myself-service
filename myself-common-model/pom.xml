@@ -12,5 +12,11 @@
     <groupId>cn.coderss</groupId>
     <artifactId>myself-common-model</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>cn.coderss</groupId>
+            <artifactId>myself-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>

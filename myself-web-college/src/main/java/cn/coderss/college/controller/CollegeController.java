@@ -3,7 +3,6 @@ package cn.coderss.college.controller;
 import cn.coderss.college.service.CollegeService;
 import cn.coderss.college.service.MyService;
 import cn.coderss.model.XbinResult;
-import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

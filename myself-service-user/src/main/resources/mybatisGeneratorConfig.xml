@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry
+            location="/Users/mac/.m2/repository/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar"/>
+    <context id="run">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/calendar1"
+                        userId="root" password="root"/>
+        <javaModelGenerator targetPackage="cn.coderss.model"
+                            targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-common-model/src/main/java"/>
+        <sqlMapGenerator targetPackage="cn.coderss.mapper"
+                         targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-service-user/src/main/resources"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.coderss.mapper"
+                             targetProject="/Users/mac/Desktop/some_Java_app/myself-service/myself-service-user/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <table tableName="%"/>
+    </context>
+</generatorConfiguration>
+        

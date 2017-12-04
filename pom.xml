@@ -11,7 +11,6 @@
     <modules>
         <module>myself-common</module>
         <module>myself-common-model</module>
-        <module>myself-common-mapper</module>
         <module>myself-service-user</module>
         <module>myself-service-user-api</module>
         <module>myself-web-user</module>
