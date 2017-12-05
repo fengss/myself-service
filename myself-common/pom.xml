@@ -11,6 +11,18 @@
 
     <groupId>cn.coderss</groupId>
     <artifactId>myself-common</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
     <!--swagger-->
@@ -59,6 +71,12 @@
             <artifactId>spring-boot-test</artifactId>
             <version>1.4.3.RELEASE</version>
         </dependency>
+        <!--template-->
+        <dependency>
+            <groupId>com.piggsoft</groupId>
+            <artifactId>beetl-spring-boot-starter</artifactId>
+            <version>0.0.3</version>
+        </dependency>
         <!--security-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -86,6 +104,11 @@
             <groupId>org.eclipse.jetty.orbit</groupId>
             <artifactId>javax.servlet</artifactId>
             <version>RELEASE</version>
+        </dependency>
+        <!--jpa-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
     </dependencies>
 </project>
